@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magiba Organics - Contact</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    /* =================== GLOBAL =================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)),
+        url("https://cdn.pixabay.com/photo/2024/02/20/11/48/god-8585364_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* =================== NAVBAR =================== */
+nav {
+    background: rgba(125, 46, 46, 0.75);
+    padding: 14px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    animation: slideDown 1s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 4px;
+}
+
+/* =================== HERO / ARTICLE =================== */
+.hero, .article {
+    max-width: 1200px;
+    margin: 60px auto 30px;
+    padding: 30px;
+    background: rgba(255,255,255,0.85);
+    border-radius: 18px;
+    text-align: center;
+    animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1, .article h1 {
+    color: #7d2e2e;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero p, .article p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* HERO BUTTON */
+.hero button {
+    margin-top: 30px;
+    padding: 14px 32px;
+    background-color: #7d2e2e;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(125,46,46,0.6); }
+    70% { box-shadow: 0 0 0 15px rgba(125,46,46,0); }
+    100% { box-shadow: 0 0 0 0 rgba(125,46,46,0); }
+}
+
+.hero button:hover {
+    background-color: #5c1f1f;
+    transform: scale(1.08);
+    animation: none;
+}
+
+/* =================== FEATURES =================== */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgba(255,255,255,0.9);
+    width: 280px;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: transform 0.4s, box-shadow 0.4s;
+    animation: fadeUp 1.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+    color: #7d2e2e;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* =================== PRODUCTS GRID =================== */
+.products {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.product-card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.product-card img:hover {
+    transform: scale(1.08);
+}
+
+.product-card h2 {
+    font-size: 18px;
+    margin: 12px 0 5px;
+    color: #7d2e2e;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.product-card button {
+    margin-bottom: 18px;
+    padding: 8px 18px;
+    background: #7d2e2e;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: #5c1f1f;
+}
+
+/* =================== FOOTER =================== */
+footer {
+    margin-top: 180px;
+    background: rgba(125, 46, 46, 0.75);
+    color: #fff;
+    text-align: center;
+    padding: 25px 10px;
+    backdrop-filter: blur(6px);
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+footer a {
+    color: #f3e5e5;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 768px) {
+    .hero h1, .article h1 {
+        font-size: 28px;
+    }
+
+    .nav-links a {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    .product-card img {
+        height: 180px;
+    }
+}
+@media (max-width: 600px) {
+
+    /* BODY */
+    body {
+        background-attachment: scroll;
+    }
+
+    /* NAVBAR */
+    nav {
+        flex-direction: column;
+        padding: 12px 20px;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    /* HERO */
+    .hero {
+        margin: 30px 15px;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero button {
+        padding: 12px 26px;
+        font-size: 14px;
+    }
+
+    /* FEATURES */
+    .features {
+        padding: 30px 10px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* PRODUCTS */
+    .products {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    /* FOOTER */
+    footer {
+        padding: 20px 10px;
+    }
+
+    footer a {
+        display: inline-block;
+        margin: 5px 6px;
+        font-size: 13px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">MAGIBA ORGANICS</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section class="article">
+    <h1>Contact Us 🌿</h1>
+    <p>
+        FOR ORDERS CALL OR WHATSAPP
+    </p>
+    <CENTER><H1>9894562560</H1></CENTER> 
+   
+</section>
+
+<footer>
+    <div>
+        <a href="index.html">Home</a> |
+        <a href="product.html">Products</a> |
+        <a href="about.html">About</a> |
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-text">
+        © 2026 MAGIBA ORGANICS • Made with 🌿 for natural living
+    </div>
+</footer>
+
+</body>
+</html>
